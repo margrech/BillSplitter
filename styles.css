@@ -1,0 +1,212 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  padding: 20px;
+  background-color: #f5f5f5;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.bill-input {
+  margin-bottom: 20px;
+}
+
+.bill-input label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+input[type="number"],
+input[type="text"] {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.bill-inputs {
+  background-color: #f8f9fa;
+  padding: 15px;
+  border-radius: 4px;
+  margin-bottom: 20px;
+}
+
+.diner-entry {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr auto;
+  gap: 10px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  margin-bottom: 10px;
+  background-color: #f9f9f9;
+}
+
+.diner-entry select {
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.add-diner {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin: 20px 0;
+}
+
+.add-diner:hover {
+  background-color: #45a049;
+}
+
+.remove-diner {
+  background-color: #ff4444;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 8px;
+  cursor: pointer;
+}
+
+.remove-diner:hover {
+  background-color: #cc0000;
+}
+
+.tip-info {
+  margin-top: 15px;
+  padding-top: 15px;
+  border-top: 1px solid #ddd;
+}
+
+.tip-info p {
+  margin: 5px 0;
+  color: #444;
+}
+
+.summary {
+  margin-top: 30px;
+  padding: 20px;
+  background-color: #f8f9fa;
+  border-radius: 4px;
+}
+
+.summary h2 {
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.totals, .payment-methods {
+  margin-bottom: 20px;
+}
+
+.payment-methods h3, .cash-reconciliation h3 {
+  color: #444;
+  margin-bottom: 10px;
+}
+
+.payment-list {
+  list-style: none;
+  margin: 10px 0;
+  padding-left: 20px;
+}
+
+.payment-list li {
+  margin-bottom: 5px;
+  color: #666;
+}
+
+.reconciliation-status {
+  margin-top: 10px;
+  padding: 10px;
+  border-radius: 4px;
+}
+
+.reconciliation-status.match {
+  background-color: #dff0d8;
+  color: #3c763d;
+}
+
+.reconciliation-status.mismatch {
+  background-color: #f2dede;
+  color: #a94442;
+}
+
+.currency-selector {
+  margin-bottom: 20px;
+}
+
+.currency-selector select {
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  width: 200px;
+}
+
+.cash-denominations {
+  margin: 20px 0;
+  background-color: #fff;
+  padding: 15px;
+  border-radius: 4px;
+  border: 1px solid #ddd;
+}
+
+.denomination-row {
+  display: grid;
+  grid-template-columns: 120px 100px 120px;
+  gap: 10px;
+  align-items: center;
+  margin-bottom: 10px;
+  padding: 5px 0;
+}
+
+.denomination-row:not(:last-child) {
+  border-bottom: 1px solid #eee;
+}
+
+.denomination-row input {
+  width: 80px;
+  padding: 5px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.denomination-row .total {
+  font-weight: bold;
+  color: #444;
+}
+
+.denomination-totals {
+  margin-top: 20px;
+  padding: 15px;
+  background-color: #f8f9fa;
+  border-radius: 4px;
+}
+
+.denomination-totals p {
+  margin: 5px 0;
+  font-weight: bold;
+}

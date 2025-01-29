@@ -1,0 +1,81 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Restaurant Bill Splitter</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Restaurant Bill Splitter</h1>
+    
+    <div class="currency-selector">
+      <label for="currency-select">Select Currency:</label>
+      <select id="currency-select" onchange="changeCurrency()">
+        <option value="USD">USD ($)</option>
+        <option value="EUR">EUR (€)</option>
+        <option value="GBP">GBP (£)</option>
+      </select>
+    </div>
+
+    <div class="bill-inputs">
+      <div class="bill-input">
+        <label for="total-bill">Bill Amount (before tip):</label>
+        <input type="number" id="total-bill" step="0.01" min="0">
+      </div>
+
+      <div class="bill-input">
+        <label for="amount-per-share">Amount per Share (including tip):</label>
+        <input type="number" id="amount-per-share-input" step="0.01" min="0">
+      </div>
+
+      <div class="tip-info">
+        <p>Total Amount (with tip): <span class="currency-symbol">$</span><span id="total-with-tip">0.00</span></p>
+        <p>Amount per Share (without tip): <span class="currency-symbol">$</span><span id="amount-per-share-no-tip">0.00</span></p>
+        <p>Tip Amount: <span class="currency-symbol">$</span><span id="tip-amount">0.00</span></p>
+        <p>Tip Percentage: <span id="tip-percentage">0</span>%</p>
+      </div>
+    </div>
+
+    <div class="diners-list" id="diners-list">
+      <!-- Diners will be added here -->
+    </div>
+
+    <button class="add-diner" onclick="addDiner()">Add Person</button>
+
+    <div class="summary" id="summary">
+      <h2>Payment Summary</h2>
+      <div class="totals">
+        <p>Total Shares: <span id="total-shares">0</span></p>
+        <p>Amount per Share (with tip): <span class="currency-symbol">$</span><span id="amount-per-share">0.00</span></p>
+        <p>Amount per Share (without tip): <span class="currency-symbol">$</span><span id="amount-per-share-summary">0.00</span></p>
+      </div>
+      
+      <div class="payment-methods">
+        <h3>Payment Collection</h3>
+        <p>Cash to Collect: <span class="currency-symbol">$</span><span id="cash-total">0.00</span></p>
+        <ul class="payment-list" id="cash-list"></ul>
+        
+        <p>Credit Card (Direct): <span class="currency-symbol">$</span><span id="credit-total">0.00</span></p>
+        <ul class="payment-list" id="credit-list"></ul>
+        
+        <p>Transfers to Receive: <span class="currency-symbol">$</span><span id="transfer-total">0.00</span></p>
+        <ul class="payment-list" id="transfer-list"></ul>
+      </div>
+
+      <div class="cash-reconciliation">
+        <h3>Cash Reconciliation</h3>
+        <div class="cash-denominations" id="cash-denominations">
+          <!-- Denominations will be added dynamically -->
+        </div>
+        <div class="denomination-totals">
+          <p>Total from Denominations: <span id="denomination-total">$0.00</span></p>
+          <p>Expected Cash: <span id="expected-cash-total">$0.00</span></p>
+          <p class="reconciliation-status" id="reconciliation-status"></p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
